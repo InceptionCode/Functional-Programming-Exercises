@@ -46,7 +46,6 @@ function multiplier ( x, y ) {
 
 let multipliedByTwo = numbers.map( partial( multiplier, 2 ) );
 
-
 //Exercise 3: Let's say response has come from a server and holds some data.
 // The data is either an list of names or another data structure.
 // Create a function that will deconstruct all the names or deconstruct only the id properties out of an object.
@@ -95,6 +94,8 @@ function sendDataType ( randomNum, dataHandlerFunc ) {
 
 sendNumberData( handleData );
 
+/* ---------------------------------------------------------------------------*/
+
 /* Currying */
 //Exercise 1: Create a Curry utility that takes a fn, arity ( the functions list of args ) as its parameters.
 // Then return a IIFE that has the original fn previous argument(s) as its parameter.
@@ -104,24 +105,23 @@ sendNumberData( handleData );
 // whether the args.length is greater than the passed arity.
 // If not return the nextCurried function that holds an arg. End the IIFE by passing an empty array.
 
-let curry =
-  ( fn, arity = fn.length, nextCurried ) =>
-   ( nextCurried = prevArgs =>
-      nextArg => {
+let curry = ( fn, arity = fn.length, nextCurried ) =>
+ ( nextCurried = prevArgs =>
+    nextArg => {
 
-        var args = prevArgs.concat( [ nextArg ] );
-        if ( args.length >= arity ) {
+      var args = prevArgs.concat( [ nextArg ] );
+      if ( args.length >= arity ) {
 
-          return fn( ...args );
+        return fn( ...args );
 
-        } else {
+      } else {
 
-          return nextCurried( args );
-
-        }
+        return nextCurried( args );
 
       }
-        )( [] );
+
+    }
+  )( [] );
 
 //Exercise 2: create a function that takes two numbers and returns the sum.
 // This function has to wait until the server returns the next number.
@@ -135,16 +135,21 @@ function add ( x, y ) {
 
 let adder = curry( add )( 10 );
 
-function serverCall () { /* function in the server that creates a random number and returns it. */ }
-
-function grabNumber ( adder /* serverNumber */ ) {
+function serverCall () {
 
   let serverNum =  Math.floor( Math.random() * ( 100 - 1 ) );
+  return serverNum;
+
+}
+
+function grabNumber ( adder, serverCall ) {
+
+  let serverNum = serverCall();
   return adder( serverNum );
 
 }
 
-grabNumber( adder );
+grabNumber( adder, serverCall );
 
 //Exercise 3: Create a function that grabs a list of names from the server.
 // The list of names will be passed along to another function that maps over the names
@@ -179,3 +184,86 @@ setTimeout( () => {
   return recievedName( occupation );
 
 }, 1500 );
+
+/* -------------------------------------------------------------------------- */
+
+/* Point-Free Style */
+//Exercise: 1 Create a function that doubles it's input value (number) and returns the result.
+//Then map over the list of numbers in order to double each number.
+// Use a mapper function in order to return the double function.
+//Point-Free Implementation: Remove the mapper function and use the double function inside the map method.
+// No arguments should be explicitly passed.
+
+function double ( x ) {
+
+  /* NOTE: console.log return statement. */
+  return x * 2;
+
+}
+
+[ 1,2,3,4,5 ].map( function mapper ( v ) {
+
+  return double ( v );
+
+} );
+
+//Point-Free no argument is being explicitly passed to func "double". Improved readability.
+//Removes unecessary function "mapper".
+[ 2,4,6,8,10 ].map( double );
+
+//Exercise: 2 Create a function that prints a message based on how many "T"'s are present.
+// There should be a function that takes the message.
+// And another seperate function that checks the message for any "T"'s.
+// There should be at least three "T"'s in order to print the message.
+
+function showMessage ( msg ) {
+
+  /* NOTE: console.log return statement */
+  console.log( msg);
+
+}
+
+function onlyPrintIf ( msg, turnIntoArray, isValid ) {
+
+  let stringArray = turnIntoArray( msg );
+
+  if ( isValid( msg, stringArray ) ) {
+
+    return showMessage( msg );
+
+  }
+
+}
+
+function turnIntoArray ( str ) {
+
+  let stringArray = str.split( '' );
+  return stringArray;
+
+}
+
+function checkForLetterT ( str, stringArray ) {
+
+  let countOfLetter = stringArray.filter( str => {
+
+    return !str.toLowerCase().indexOf( 't' );
+
+  } ).length;
+
+  if ( countOfLetter >= 3 ) {
+
+    return true;
+
+  } else {
+
+    return false;
+
+  }
+
+}
+
+//Each specific task is broken up into its own function that returns one result.
+// The onlyPrintIf function allows the Point-Free style.
+// By elimating the need to explicitly pass arguments to the other functions.
+
+onlyPrintIf ( 'Test the value', turnIntoArray, checkForLetterT );
