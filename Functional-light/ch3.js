@@ -219,7 +219,7 @@ function double ( x ) {
 function showMessage ( msg ) {
 
   /* NOTE: console.log return statement */
-  console.log( msg);
+  return msg;
 
 }
 
