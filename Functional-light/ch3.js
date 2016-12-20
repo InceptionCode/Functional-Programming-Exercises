@@ -34,7 +34,7 @@ partial( log, 'James' )( 'instructor' );
 //Than returns the numbers multiplied by any number in a new array. Save the new array in a var.
 // This new array must hold each value multiplied by to in order to be stored in the databse.
 
-var numbers = [ 1,21,3,24,55 ];
+const numbers = [ 1,21,3,24,55 ];
 
 function multiplier ( x, y ) {
 
@@ -105,7 +105,7 @@ sendNumberData( handleData );
 // whether the args.length is greater than the passed arity.
 // If not return the nextCurried function that holds an arg. End the IIFE by passing an empty array.
 
-let curry = ( fn, arity = fn.length, nextCurried ) =>
+const curry = ( fn, arity = fn.length, nextCurried ) =>
  ( nextCurried = prevArgs =>
     nextArg => {
 
@@ -133,7 +133,7 @@ function add ( x, y ) {
 
 }
 
-let adder = curry( add )( 10 );
+const adder = curry( add )( 10 );
 
 function serverCall () {
 
@@ -162,7 +162,7 @@ function possibleOccupations ( name, occupation ) {
 
 }
 
-let curriedPossibleOccupations = curry( possibleOccupations );
+const curriedPossibleOccupations = curry( possibleOccupations );
 
 setTimeout( () => {
 
