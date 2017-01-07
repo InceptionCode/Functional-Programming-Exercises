@@ -73,7 +73,7 @@ var scaryObj = {
   group2: [ 'Raven', 'Richard', 'Bryan' ]
 };
 
-var seperateGroups = ()=> {
+const seperateGroups = ()=> {
 
   for( let prop in scaryObj ) {
 
@@ -90,29 +90,28 @@ var seperateGroups = ()=> {
   }
 
 };
-//seperateGroups();
+seperateGroups();
 
-var selectLastName = array => {
+const selectLastName = array => {
 
   let lastName = array[ array.length -1 ];
   return lastName;
 
 };
-//selectLastName( seperateGroups );
+selectLastName( seperateGroups );
 //Wait how is array.pop() not a function I am sure it is. How am I getting this error.
 //Because functions aren't pure and data is being mutated badly.
 
 //NOTE: Before moving on comment out the seperateGroups call on line 93 and selectLastName call on line 96.
 //-----Pure functions to the rescue-------
-const seperatingGroups = ( obj, propName )=> {
-
-  let group1 = obj[propName];
-  let group2 = obj[propName];
-  return [ group1, group2 ];
+const seperatingProps = ( obj, propName )=> {
+  //I know I can just deconstruct scaryObj but just go with it.
+  let prop = obj[propName];
+  return prop;
 
 };
-let group1 = seperatingGroups( scaryObj, 'group1' )[0];
-let group2 = seperatingGroups( scaryObj, 'group2' )[1];
+let group1 = seperatingProps( scaryObj, 'group1' );
+let group2 = seperatingProps( scaryObj, 'group2' );
 
 //NOTE: console.log the function calls below
 selectLastName(group1);
