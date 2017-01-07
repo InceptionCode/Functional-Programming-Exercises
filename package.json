@@ -1,0 +1,30 @@
+{
+  "name": "functional-programming-exercises",
+  "version": "1.0.1",
+  "description": "Included ramda for advance functional programming capabilities.",
+  "main": "index.js",
+  "dependencies": {
+    "ramda": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InceptionCode/Functional-Programming-Exercises.git"
+  },
+  "keywords": [
+    "functional",
+    "javascript",
+    "testing",
+    "learning",
+    "practicing"
+  ],
+  "author": "Darrell Washington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InceptionCode/Functional-Programming-Exercises/issues"
+  },
+  "homepage": "https://github.com/InceptionCode/Functional-Programming-Exercises#readme"
+}
