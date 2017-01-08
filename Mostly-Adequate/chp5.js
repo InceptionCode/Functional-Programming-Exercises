@@ -58,39 +58,42 @@ var CARS = [{
 // Exercise 1:
 // ============
 // Use _.compose() to rewrite the function below. Hint: _.prop() is curried.
-var isLastInStock = function(cars) {
-  var last_car = _.last(cars);
-  return _.prop('in_stock', last_car);
-};
+
+const inStock = R.prop('in_stock');
+const isLastInStock = R.compose( inStock, R.last );
+//NOTE: console.log(isLastInStock(CARS);
+
 
 // Exercise 2:
 // ============
 // Use _.compose(), _.prop() and _.head() to retrieve the name of the first car.
-var nameOfFirstCar = undefined;
+const carName = R.prop('name');
+const nameOfFirstCar = R.compose( carName, R.head );
+//NOTE: console.log( nameOfFirstCar( CARS ) );
 
 
 // Exercise 3:
 // ============
 // Use the helper function _average to refactor averageDollarValue as a composition.
 var _average = function(xs) {
-  return _.reduce(_.add, 0, xs) / xs.length;
+  return R.reduce(R.add, 0, xs) / xs.length;
 }; // <- leave be
 
-var averageDollarValue = function(cars) {
-  var dollar_values = _.map(function(c) {
-    return c.dollar_value;
-  }, cars);
-  return _average(dollar_values);
-};
+const dollar_values = c=> c.dollar_value;
+const mapDollar_values = R.map( dollar_values );
+const averageDollarValue = R.compose( _average ,mapDollar_values );
 
+//NOTE: console.log( averageDollarValue( CARS ) );
 
 // Exercise 4:
 // ============
 // Write a function: sanitizeNames() using compose that returns a list of lowercase and underscored car's names: e.g: sanitizeNames([{name: 'Ferrari FF', horsepower: 660, dollar_value: 700000, in_stock: true}]) //=> ['ferrari_ff'].
 
-var _underscore = _.replace(/\W+/g, '_'); //<-- leave this alone and use to sanitize
+var _underscore = R.replace(/\W+/g, '_'); //<-- leave this alone and use to sanitize
 
-var sanitizeNames = undefined;
+const sanitizeNames = R.map( R.compose( _underscore, R.toLower, R.prop('name')  ) );
+
+console.log( sanitizeNames(CARS) );
 
 // Bonus 2:
 // ============
