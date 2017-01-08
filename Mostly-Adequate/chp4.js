@@ -1,4 +1,4 @@
-/* global require: true */
+/* global module, require: true */
 const R =require( 'ramda' );
 
 //Replicating the fun in currying.
@@ -117,3 +117,9 @@ const takeSome = take( something );
 const byFour = takeSome( 4 );
 //NOTE console.log the variable below.
 byFour;
+
+module.exports = {
+
+  change: change
+
+};
