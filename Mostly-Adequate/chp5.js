@@ -93,7 +93,7 @@ var _underscore = R.replace(/\W+/g, '_'); //<-- leave this alone and use to sani
 
 const sanitizeNames = R.map( R.compose( _underscore, R.toLower, R.prop('name')  ) );
 
-console.log( sanitizeNames(CARS) );
+//NOTE: console.log( sanitizeNames(CARS) );
 
 // Bonus 2:
 // ============
