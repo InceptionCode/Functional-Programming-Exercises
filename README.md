@@ -12,7 +12,7 @@ I encourage anyone to fork this repo and learn along with me or make changes of 
 
 ## Usage
 
-All files are completely JS so, I would prefer that you had Node (latest version), that way all example code can be run on Node. However, no NPMs or Node is necessary. The majority of the code should be able to run in the browser playgrounds such as Codepen, JSFiddle etc....
+All files are completely JS so, I would prefer that you had Node (latest version), that way all example code can be run on Node. However, no NPMs or Node is necessary (node_modules and Ramda.js have been recently installed). The majority of the code should be able to run in the browser playgrounds such as Codepen, JSFiddle etc....
 
 - All files are organized by the Functional Programming resources root folder and the chapters associated.
 - Carefully review code in files in order to see a working example. Some return statements must be changed to console.log's
