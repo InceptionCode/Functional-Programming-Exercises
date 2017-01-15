@@ -39,7 +39,9 @@ Maybe.prototype.isNothing = function () {
 Maybe.prototype.map = function(f) {
        return this.isNothing() ? Maybe.of(null) : Maybe.of( f(this._value) );
 };
-
+Maybe.prototype.join = function() {
+	  return this.isNothing() ? Maybe.of(null) : this._value;
+}
 //Either Functor
 const Either = R.curry( (f, g, e )=> {
 	switch( e.constructor ) { 
@@ -171,7 +173,13 @@ var save = function(x) {
 var ex8 = R.compose( Either( console.log, save ), ex7 );
 //NOTE: console.log( ex8( "user" ) ); Change the length you pass through in order to recieve the error message.
 
-
+module.exports = {
+	Identity: Identity,
+	Maybe: Maybe,
+	Left: Left,
+	Right: Right,
+	Either: Either
+};
 
 
 
