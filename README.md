@@ -1,22 +1,40 @@
 # Functional-Programming-Exercises
-This is a repository of my personal exercises for Functional Programming as well as other JS practice files.
+This is a repository of my personal exercises and projects for Functional Programming as well as other JS practice files.
 I am currently on the journey of becoming a better programmer (and not a noob) and figured it was time to explore functional programming.
 The collection of exercise will be based on FP learning materials including:
 
-- Kyle Simpson's functional light book
-- Brian Lonsdorf's Mostly Adequate Guide to Functional Programming.
-- Eric Elliot's Programming JavaScript Applications.
+- [Kyle Simpson's functional light book](https://github.com/getify/Functional-Light-JS)
+- [Brian Lonsdorf's Mostly Adequate Guide to Functional Programming.](https://drboolean.gitbooks.io/mostly-adequate-guide/content/)
+- [Eric Elliot's Programming JavaScript Applications.](http://chimera.labs.oreilly.com/books/1234000000262/index.html)
 - etc...
 
-I encourage anyone to fork this repo and learn along with me or make changes of your own. I am a fairly new programmer so some exercises will be "kind of" practical. 
+I encourage anyone to fork this repo and learn along with me or make changes of your own. I am a fairly new programmer so some exercises will be "kind of" practical. I have also included very meaningful exercises, projects and examples. Look over them carefully and try to grasp the FP concepts.
 
 ## Usage
 
-All files are completely JS so, I would prefer that you had Node (latest version), that way all example code can be run on Node. However, no NPMs or Node is necessary (node_modules and Ramda.js have been recently installed). The majority of the code should be able to run in the browser playgrounds such as Codepen, JSFiddle etc....
+All files are completely JS so, I would prefer that you had Node (latest version), that way all example code can be run on Node. However, no NPMs or Node is necessary (node_modules, Ramda.js, Ramda-fantasy, and Flow.js have been recently installed). The majority of the code should be able to run in the browser playgrounds such as Codepen, JSFiddle etc....
 
 - All files are organized by the Functional Programming resources root folder and the chapters associated.
+- All exercise and project files will be associated to their respective folders.
 - Carefully review code in files in order to see a working example. Some return statements must be changed to console.log's
 - I will try my best to leave a /* NOTE */ which should give instructions on how to test parts of the code.
-- To run on Node: node [ name of resource ] / [ chp#.js ] The # in chp means the chapter number.
+- To run the files start at the root of the file in your terminal and run $ node [ name of resource ] / [ chp#.js ] The # in chp means the chapter number.
+- Some resoures are structured differently depending on what folder you are in.
 - If you do not have Node copy the code and paste it into your favorite JS playground online. 
 - Or however, you wish to run the JS files are completely up to you.
+- I have included a few more helper tools that depend on Babel to be compiled into vanilla JS. The compiled files will be in their own seperate "build" folder.
+
+If you wish to install these tools I encourage you to look into their documentation and follow along with the entire install and build process.
+
+## List of Dependencies
+- [Flow.js](https://flowtype.org/) (requires .flowconfig file)
+- [Ramda.js](http://ramdajs.com/)
+- [Ramda-fantasy](https://github.com/ramda/ramda-fantasy)
+- [Babel](https://babeljs.io/) (requires extra plugins and .babelrc file)
+
+## Resources
+
+Besides the books I have marked out above I suggest trying out a true functional language. My pick would be [Elm](http://www.elm-lang.org/). This is a great way to learn the benefits, architecture and understanding behind FP.
+If you take the Elm path (which I highly suggest you do) check out my repo on elm, ["Elm-training"](https://github.com/InceptionCode/elm-training). 
+To go even deeper and get a great sense of FP and the power of Elm, checkout James Moore's [Elm Course for Beginners](http://courses.knowthen.com/p/elm-for-beginners). This will definitely jump start you in FP and Elm concepts.
+I will also leave you with a much better list of resources for JS in general https://github.com/javascript-society/javascript-path
