@@ -1,3 +1,4 @@
+
 /* The significance of pure functions can't be stressed enough.
 Here I will create two short examples of impure functions and pure functions.
 In each example I will showcase the error and issues that can occur when dealing with impure functions. */
