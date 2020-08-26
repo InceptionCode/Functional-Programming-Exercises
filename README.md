@@ -4,8 +4,8 @@ I am currently on the journey of becoming a better programmer (and not a noob) a
 The collection of exercise will be based on FP learning materials including:
 
 - [Kyle Simpson's functional light book](https://github.com/getify/Functional-Light-JS)
-- [Brian Lonsdorf's Mostly Adequate Guide to Functional Programming.](https://drboolean.gitbooks.io/mostly-adequate-guide/content/)
-- [Eric Elliot's Programming JavaScript Applications.](http://chimera.labs.oreilly.com/books/1234000000262/index.html)
+- [Brian Lonsdorf's Mostly Adequate Guide to Functional Programming.](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/content/)
+- [Eric Elliot's Programming JavaScript Applications.](https://www.oreilly.com/library/view/programming-javascript-applications/9781491950289/)
 - etc...
 
 I encourage anyone to fork this repo and learn along with me or make changes of your own. I am a fairly new programmer so some exercises will be "kind of" practical. I have also included very meaningful exercises, projects and examples. Look over them carefully and try to grasp the FP concepts.
