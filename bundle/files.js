@@ -3,10 +3,9 @@
 //Styles
 require("../sass/exercises.sass");
 
-
 //Exercises
 require("../fp-exercises/string-play.js");
 require("../fp-exercises/array-play.js");
-
+require("../fp-exercises/rxjs-play.js");
 
 //Projects

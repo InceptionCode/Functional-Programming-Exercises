@@ -1,4 +1,5 @@
 # Functional-Programming-Exercises
+
 This is a repository of my personal exercises and projects for Functional Programming as well as other JS practice files.
 I am currently on the journey of becoming a better programmer (and not a noob) and figured it was time to explore functional programming.
 The collection of exercise will be based on FP learning materials including:
@@ -13,6 +14,7 @@ I encourage anyone to fork this repo and learn along with me or make changes of 
 ### Update:
 
 I can't believe it has been 4 years sense my last update to this. I definitely want to continue this repo and will add more short projects that involve:
+
 - [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) "A library for composing asynchronous and event-based programs by using observable sequences". Lodash for events... literally.
 
 - React & Angular (maybe)
@@ -24,10 +26,10 @@ All files are completely JS so, I would prefer that you had Node (latest version
 - All files are organized by the Functional Programming resources root folder and the chapters associated.
 - All exercise and project files will be associated to their respective folders.
 - Carefully review code in files in order to see a working example. Some return statements must be changed to console.log's
-- I will try my best to leave a /* NOTE */ which should give instructions on how to test parts of the code.
+- I will try my best to leave a /_ NOTE _/ which should give instructions on how to test parts of the code.
 - To run the files start at the root of the file in your terminal and run $ node [ name of resource ] / [ chp#.js ] The # in chp means the chapter number.
 - Some resources are structured differently depending on what folder you are in.
-- In order to view working examples and projects I highly recommend installing all listed dependencies and config webpack properly then run "webpack-dev-server" at the root of the repo. You should have the ability to see all files and view html files as well.
+- In order to view working examples and projects I highly recommend installing all listed dependencies and config webpack properly then run "npm start" at the root of the repo. You should have the ability to see all files and view html files as well. **There are additional scripts in package.json you should keep note of.**
 - If you do not have Node copy the code and paste it into your favorite JS playground online.
 - Or however, you wish to run the JS files is completely up to you.
 - I have included a few more helper tools that depend on Babel to be compiled into vanilla JS. The compiled files will be in their own separate "build" folder inside their respective directories.
@@ -35,6 +37,7 @@ All files are completely JS so, I would prefer that you had Node (latest version
 If you wish to install these tools I encourage you to look into their documentation and follow along with the entire install and build process.
 
 ## List of Dependencies
+
 - [Flow.js](https://flowtype.org/) (requires .flowconfig file)
 - [Ramda.js](http://ramdajs.com/)
 - [Ramda-fantasy](https://github.com/ramda/ramda-fantasy)
@@ -51,4 +54,5 @@ To go even deeper and get a great sense of FP and the power of Elm, checkout Jam
 I will also leave you with a much better list of resources for JS in general https://github.com/javascript-society/javascript-path
 
 ## Issues
+
 Send all request, questions and complaints as "Issues". For example if you want to see my .babelrc file send a request for it as an "Issue".
