@@ -10,6 +10,13 @@ The collection of exercise will be based on FP learning materials including:
 
 I encourage anyone to fork this repo and learn along with me or make changes of your own. I am a fairly new programmer so some exercises will be "kind of" practical. I have also included very meaningful exercises, projects and examples. Look over them carefully and try to grasp the FP concepts.
 
+### Update:
+
+I can't believe it has been 4 years sense my last update to this. I definitely want to continue this repo and will add more short projects that involve:
+- [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) "A library for composing asynchronous and event-based programs by using observable sequences". Lodash for events... literally.
+
+- React & Angular (maybe)
+
 ## Usage
 
 All files are completely JS so, I would prefer that you had Node (latest version), that way all example code can be run on Node. However, no NPMs or Node is necessary (node_modules, Ramda.js, Ramda-fantasy, and Flow.js have been recently installed). The majority of the code should be able to run in the browser playgrounds such as Codepen, JSFiddle etc....
