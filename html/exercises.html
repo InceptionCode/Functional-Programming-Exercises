@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 </head>
 <body>
-    <div class= "string-play-section">
+    <div class="string-play section">
         <h1>String Play Exercise</h1>
         <input class="string-input" type="text" placeholder="Enter Text. . .">
         <div class="text-display"></div>
@@ -13,7 +13,7 @@
             <button class="reverse-button"> Reverse Text </button>
         </div>
     </div>
-    <div class= "array-play-section">
+    <div class="array-play section">
         <h1>Array Play Exercise</h1>
         <h2> What do you want?</h2>
         <p> 
@@ -31,12 +31,54 @@
             <button class="capitalize-button"> Capitalize Items </button>
         </div>
     </div>
-    <div class="rxjs-play-section">
+    <div class="rxjs-play section">
       <h1>RxJs Play Exercises</h1>
+      <div class="intro">
+        <p>
+          <em>So why RxJs?</em>
+          You can obviously handle most async work, events, & other callback operations with pure Javascript or framework that you are using. So why use RxJs? Well what if I told you that there was a functional programming library that allows you to manipulate the above operations at even given time. Would you see the value?<br>
+          RxJs power lies in the out of the box operators/helpers that it has to increase the power of handling async events. <br>
+          <blockquote><em>"Think of RxJs as Lodash for events</em></blockquote>
+          <br>
+          I couldn't sum it up any better than the RxJs team. So lets get into some small exercises to help us understand the library a bit more. The concepts are a bit different but once you catch on you will understand the power of this library.
+        </p>
+      </div>
+   
       <h2>Intro Button Exercise</h2>
-      <button id="jsButton">Click Me!! (js)</button>
-      <p>RxJs handles a click event much differently</p>
-      <button id="rxjsButton">Click Me!! (rxjs)</button>
+      <p>
+        RxJs handles a click event much differently. As we all know pure functions mean that you're less likely to get errors & mess up state.
+      </p>
+      <div class="rxjs-buttons">
+        <button id="jsButton">Click Me!! (js)</button>
+        <button id="rxjsButton">Click Me!! (rxjs)</button>
+      </div>
+      <div class="result button-click"></div>
+      <div class="live-scores">
+        <h2>Live Scores Exercise</h2>
+        <p>
+          Looks the same right? Nothing special... but check the code. Seems like overkill just to insert text into a div right? Well lets complicate things a bit.
+          <br>
+          Suppose we are building out a small app that allows you to see live basketball score updates. You see the full score of the game & time remaining update every 5 seconds along w/ who scored the basket. The user has an option to replay the last x amount of scores (just in case you missed anything). Lets compare how this is done in just JS versus RxJs. Here is what we care about...
+        </p>
+        <ul>
+          <li>The score should update every 5 seconds as well as the time remaining in the quarter. Obviously the final score is going to be ridiculous</li>
+          <li>
+            We must keep track of all scores. 
+            Show the most recent score but give the user an option to see past buckets.
+          </li>
+        </ul>
+        <strong>
+          The app isn't the point the exercise is so I will only show live score for 1 quarter not the whole game.
+        </strong>
+      </div>
+      <input name="team1Name" type="text" placeholder="Insert team 1">
+      <input name="team2Name" type="text" placeholder="Insert team 2">
+      <button id="startGame">start...</button><button id="resetGame">reset...</button>
+      <h3 id="score"><span id="team1">Team 1</span> - <span id="team2">Team 2</span></h3>
+      <strong id="time">12:00</strong>
+      <p id="scorer">Scorer</p>
+      <!-- Note Finish Implementation -->
+      <div>Playback section</div>
     </div>
 </body>
 </html>

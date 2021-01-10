@@ -1,11 +1,11 @@
 /* global require: true */
 
 //Styles
-require("../sass/exercises.sass");
+import "../sass/exercises.sass";
 
 //Exercises
-require("../fp-exercises/string-play.js");
-require("../fp-exercises/array-play.js");
-require("../fp-exercises/rxjs-play.js");
+import "../fp-exercises/string-play.js";
+import "../fp-exercises/array-play.js";
+import "../fp-exercises/rxjs-play.js";
 
 //Projects

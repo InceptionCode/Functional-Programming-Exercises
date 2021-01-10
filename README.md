@@ -41,6 +41,7 @@ If you wish to install these tools I encourage you to look into their documentat
 - [Flow.js](https://flowtype.org/) (requires .flowconfig file)
 - [Ramda.js](http://ramdajs.com/)
 - [Ramda-fantasy](https://github.com/ramda/ramda-fantasy)
+- [RxJs](https://rxjs-dev.firebaseapp.com/guide/overview)
 - [Babel](https://babeljs.io/) (requires extra plugins and .babelrc file)
 - [Webpack](https://webpack.github.io/docs/)
 - [Node-SASS](https://github.com/sass/node-sass)
