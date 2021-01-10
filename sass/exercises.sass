@@ -3,14 +3,13 @@
 body
   background: lightgray !important
   font:
-    family: Helevetica, sans-serif
-    size: 18px
+  family: Helevetica, sans-serif
+  size: 18px
 
-  h1 
+  h1
     text-align: center
 
-.string-play-section,
-.array-play-section
+.section
   display: flex
   flex-direction: column
   align-items: center
@@ -20,6 +19,8 @@ body
   padding: 20px
   border-radius: 5px
   background-color: white
+  .intro
+    width: 700px
 
   .string-input,
   .array-input
@@ -29,42 +30,39 @@ body
     border: none
     border-bottom: 2px solid red
     font:
-      size: 16px
-      weight: bold
+    size: 16px
+    weight: bold
 
     &:focus
       outline: none
 
-  .text-display 
+  .text-display
     margin-bottom: 30px
 
-
-  .string-buttons button,
-  .array-buttons button,
-  .insert-item
+  button
     background-color: $light-blue
     padding: 10px
     width: 140px
     border: none
     font-size: 16px
-    transition: transform .3s ease-in-out 
+    transition: transform .3s ease-in-out
 
-    &:hover 
+    &:hover
       cursor: pointer
       transform: scale(1.07)
       box-shadow: 2px 15px 5px -8px rgba(0, 0, 0, 0.3)
 
     &:focus
       outline: none
-   
+
   .capitalize-button,
   .insert-item
     width: 160px!important
 
-  .list-display 
+  .list-display
     margin: 40px 0
-    
-    li 
+
+    li
       list-style: none
       margin: 10px 0
       padding: 10px
