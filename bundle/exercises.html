@@ -56,12 +56,12 @@
       <div class="live-scores">
         <h2>Live Scores Exercise</h2>
         <p>
-          Looks the same right? Nothing special... but check the code. Seems like overkill just to insert text into a dive right? Well lets complicate things a bit.
+          Looks the same right? Nothing special... but check the code. Seems like overkill just to insert text into a div right? Well lets complicate things a bit.
           <br>
-          Suppose we are building out a small app that allows you to see live basketball score updates. You see the full score of the game & time remaining update every 5 seconds along w/ who scored the basket. The user has an option to replay the last x amount of scores. Lets compare how this is done in just JS versus RxJs. Here is what we care about...
+          Suppose we are building out a small app that allows you to see live basketball score updates. You see the full score of the game & time remaining update every 5 seconds along w/ who scored the basket. The user has an option to replay the last x amount of scores (just in case you missed anything). Lets compare how this is done in just JS versus RxJs. Here is what we care about...
         </p>
         <ul>
-          <li>The score should update every 5 seconds as well as the time remaining in the quarter.</li>
+          <li>The score should update every 5 seconds as well as the time remaining in the quarter. Obviously the final score is going to be ridiculous</li>
           <li>
             We must keep track of all scores. 
             Show the most recent score but give the user an option to see past buckets.
@@ -71,11 +71,13 @@
           The app isn't the point the exercise is so I will only show live score for 1 quarter not the whole game.
         </strong>
       </div>
-      <input type="text" placeholder="Insert team 1"><input type="text" placeholder="Insert team 2">
+      <input name="team1Name" type="text" placeholder="Insert team 1">
+      <input name="team2Name" type="text" placeholder="Insert team 2">
       <button id="startGame">start...</button><button id="resetGame">reset...</button>
-      <h3 id="score"><span id="team1"></span><span id="team1"></span></h3>
-      <strong id="time"></strong>
-      <p>Scorer</p>
+      <h3 id="score"><span id="team1">Team 1</span> - <span id="team2">Team 2</span></h3>
+      <strong id="time">12:00</strong>
+      <p id="scorer">Scorer</p>
+      <!-- Note Finish Implementation -->
       <div>Playback section</div>
     </div>
 </body>

@@ -90,13 +90,13 @@ function updateScore(): void {
   
     switch (randomTeam) {
       case 1:
-        team1.scorer = `${playerList1[randomIndex]} ${score}pts`
+        team1.scorer = `${team1.teamName}: ${playerList1[randomIndex]} ${score}pts`
         team1.score = score + team1.score
 
         scoreRecord.push({ ...team1 })
         break;
       case 2:
-        team2.scorer = `${playerList2[randomIndex]} ${score}pts`
+        team2.scorer = `${team2.teamName}: ${playerList2[randomIndex]} ${score}pts`
         team2.score = score + team2.score
         scoreRecord.push({ ...team2 })
       default:
